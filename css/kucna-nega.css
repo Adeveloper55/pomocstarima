@@ -1875,3 +1875,16 @@ body:has(.kn-dentia-hero) header.transparent:not(.smaller) .menu_side_area .btn-
 @media (prefers-reduced-motion: reduce) {
   .kn-menu-icon, .kn-menu-icon::after { transition: none; }
 }
+
+/* Contact without a form, and site credit. */
+.kn-contact-call { padding: 38px; background: #f8f6f0; border-left: 2px solid #2f8f84; }
+.kn-contact-call > i { display: block; font-size: 30px; color: #2f8f84; margin-bottom: 26px; }
+.kn-contact-call h3 { font-size: 30px; }
+.kn-contact-call p { margin-bottom: 24px; }
+.kn-footer-credit { font-size: 12px; color: rgba(255,255,255,.6); }
+.kn-footer-credit a { color: rgba(255,255,255,.9); text-decoration: underline; text-underline-offset: 3px; margin-left: 4px; }
+@media (max-width: 991px) {
+  .kn-contact-call { padding: 28px 24px; }
+  .subfooter .de-flex { gap: 12px; }
+  .kn-footer-credit { text-align: center; }
+}
