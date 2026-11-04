@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    image: pomocstarima-web:latest
+    container_name: pomocstarima-web
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    # Dokploy: set domain to pomocstarima.audaxtestsajt.com on this service
+    # (Traefik/Caddy labels are managed in Dokploy UI — no extra labels needed here)

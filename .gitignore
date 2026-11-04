@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+__pycache__/
+*.py
+.env
+.env.*
+!.env.example
+.cursor/
+images/care/_*
