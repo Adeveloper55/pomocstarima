@@ -212,6 +212,17 @@ header div#logo {
 header {
   transition: background-color .25s ease, box-shadow .25s ease, padding .25s ease !important;
 }
+/* Desktop: header always sticks while scrolling */
+@media (min-width: 992px) {
+  header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1001;
+  }
+}
 header .de-flex {
   align-items: center !important;
   min-height: 78px;
