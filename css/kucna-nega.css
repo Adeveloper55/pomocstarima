@@ -51,6 +51,47 @@ footer li a,
 footer p { color: rgba(255,255,255,0.75) !important; }
 footer .widget h5 { color: #fff !important; font-family: var(--kn-sans) !important; }
 footer li a { color: rgba(255,255,255,0.7) !important; }
+
+/* Homepage "Zašto baš mi" — dark navy #content bleed; force light text */
+.kn-why {
+  color: #fff;
+  padding: 90px 0;
+}
+.kn-why h1,
+.kn-why h2,
+.kn-why h3,
+.kn-why h4,
+.kn-why h5,
+.kn-why h6 {
+  color: #fff !important;
+}
+.kn-why p,
+.kn-why li,
+.kn-why .ul-check li,
+.kn-why .ul-check.text-dark li,
+.kn-why.text-light p,
+.kn-why.text-light li {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+.kn-why .subtitle,
+.kn-why .subtitle.id-color,
+.kn-why .subtitle.s2,
+.kn-why.text-light .subtitle {
+  color: #a8c4f5 !important;
+  opacity: 1 !important;
+}
+.kn-why .btn-main,
+.kn-why .btn-main span {
+  color: #fff !important;
+}
+.kn-why .ul-check li:before {
+  color: #7eb0ff !important;
+}
+@media (max-width: 991px) {
+  .kn-why {
+    padding: 64px 0;
+  }
+}
 .notice-box,
 .notice-box strong {
   color: var(--kn-ink) !important;
