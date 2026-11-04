@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="css/kucna-nega.css" rel="stylesheet" type="text/css">
+    <link href="css/kucna-nega.css?v=20261104-2" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="wrapper">
@@ -33,7 +33,8 @@
                             <div class="de-flex-col">
                                 <div id="logo"><a href="/" class="kn-logo"><span class="kn-logo-mark" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none"><rect width="64" height="64" rx="16" fill="#1B4F8A"/><path d="M32 15L49 28.8V48.2c0 1.2-1 2.2-2.2 2.2H17.2c-1.2 0-2.2-1-2.2-2.2V28.8L32 15z" fill="#EEF5FB"/><path d="M32 19.2L45.8 30.2v18.2H18.2V30.2L32 19.2z" fill="#F8FBFF"/><path d="M27.2 50.4V37c0-1.2 1-2.2 2.2-2.2h5.2c1.2 0 2.2 1 2.2 2.2v13.4" fill="#1B4F8A"/><circle cx="45.5" cy="21" r="7.2" fill="#2F8F84"/><path d="M45.5 17.6v6.8M42.1 21h6.8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="kn-logo-text">Kućna nega<em>Pomoć u kući</em></span></a></div>
                             </div>
-                            <div class="de-flex-col header-col-mid">
+                            <div class="de-flex-col header-col-mid" role="navigation" aria-label="Glavna navigacija">
+                                <div class="kn-menu-intro"><span>Kućna nega</span><p>Tu smo, kada zatreba.</p></div>
                                 <ul id="mainmenu">
                                     <li><a class="menu-item" href="/">Početna</a></li>
                                     <li><a class="menu-item" href="/about">O nama</a></li>
@@ -43,11 +44,12 @@
                                     <li><a class="menu-item" href="/mreza">Naša mreža</a></li>
                                     <li><a class="menu-item" href="/contact">Kontakt</a></li>
                                 </ul>
+                                <div class="kn-menu-footer"><p>Podrška Vašoj porodici,<br>u domu Vaših najbližih.</p><a href="/contact">Hajde da se upoznamo <span aria-hidden="true">↗</span></a></div>
                             </div>
                             <div class="de-flex-col">
                                 <div class="menu_side_area">
                                     <a href="#" class="btn-main kn-call"><span>Pozovi</span></a>
-                                    <span id="menu-btn"></span>
+                                    <button id="menu-btn" class="kn-menu-toggle" type="button" aria-expanded="false" aria-controls="mainmenu" aria-label="Otvori meni"><span class="kn-menu-icon" aria-hidden="true"></span></button>
                                 </div>
                             </div>
                         </div>
@@ -153,7 +155,7 @@
     </div>
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
-    <script src="js/kn-mobile-menu.js"></script>
+    <script src="js/kn-mobile-menu.js?v=20261104-2"></script>
     <script src="js/kn-phone.js"></script>
 </body>
 </html>
