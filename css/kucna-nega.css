@@ -212,11 +212,13 @@ header div#logo {
 header {
   transition: background-color .25s ease, box-shadow .25s ease, padding .25s ease !important;
 }
-/* Desktop: header always sticks while scrolling */
-@media (min-width: 992px) {
-  header {
+/* Desktop: keep navigation visible in both scroll directions. */
+@media (min-width: 994px) {
+  #wrapper header {
     position: fixed !important;
-    top: 0;
+    top: 0 !important;
+    margin-top: 0 !important; /* The theme's scroll-down class sets -90px. */
+    transform: none !important;
     left: 0;
     right: 0;
     width: 100%;
