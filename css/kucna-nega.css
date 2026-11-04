@@ -166,18 +166,29 @@ header.header-light {
   background: rgba(255,255,255,.98) !important;
   box-shadow: 0 1px 0 var(--kn-line), 0 10px 28px rgba(20, 35, 58, 0.05) !important;
 }
+/* Scrolled / light header: always dark logo (overrides hero white-nav rules) */
 header.smaller #mainmenu > li > a,
 header.header-light #mainmenu > li > a,
 header.smaller .kn-logo-text,
 header.header-light .kn-logo-text,
 header.header-light .brand-text,
-header.header-light .brand-text.dark {
+header.header-light .brand-text.dark,
+body:has(.kn-dentia-hero) header.smaller .kn-logo-text,
+body:has(.kn-page-hero) header.smaller .kn-logo-text,
+body:has(.kn-dentia-hero) header.smaller #mainmenu > li > a,
+body:has(.kn-page-hero) header.smaller #mainmenu > li > a {
   color: var(--kn-ink) !important;
   text-shadow: none !important;
 }
 header.smaller .kn-logo-text em,
-header.header-light .kn-logo-text em {
+header.header-light .kn-logo-text em,
+body:has(.kn-dentia-hero) header.smaller .kn-logo-text em,
+body:has(.kn-page-hero) header.smaller .kn-logo-text em {
   color: var(--kn-sea) !important;
+}
+body:has(.kn-dentia-hero) header.smaller #menu-btn:before,
+body:has(.kn-page-hero) header.smaller #menu-btn:before {
+  color: var(--kn-ink) !important;
 }
 
 /* ===== HERO (home split) ===== */
@@ -927,12 +938,25 @@ body:has(.kn-hero-split) header.transparent:not(.smaller) #menu-btn:before {
 }
 
 body:has(.kn-page-hero) header.transparent:not(.smaller) {
-  background: linear-gradient(to bottom, rgba(10,18,36,.85), rgba(10,18,36,.35), transparent) !important;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 18, 40, 0.92) 0%,
+    rgba(10, 18, 40, 0.72) 55%,
+    rgba(10, 18, 40, 0) 100%
+  ) !important;
+  box-shadow: none !important;
 }
 body:has(.kn-page-hero) header.transparent:not(.smaller) #mainmenu > li > a,
-body:has(.kn-page-hero) header.transparent:not(.smaller) .brand-text {
+body:has(.kn-page-hero) header.transparent:not(.smaller) .brand-text,
+body:has(.kn-page-hero) header.transparent:not(.smaller) .kn-logo-text {
   color: #fff !important;
-  text-shadow: 0 1px 8px rgba(0,0,0,.5);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
+}
+body:has(.kn-page-hero) header.transparent:not(.smaller) .kn-logo-text em {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+body:has(.kn-page-hero) header.transparent:not(.smaller) #menu-btn:before {
+  color: #fff !important;
 }
 
 /* Desktop-only extras — hidden by default (mobile unchanged) */
@@ -1461,17 +1485,23 @@ body:has(.kn-page-hero) header.transparent:not(.smaller) .brand-text {
   line-height: 1;
 }
 
-/* Header over Dentia hero = white nav */
+/* Header over Dentia hero — dark top bar so white logo never sits on white */
 body:has(.kn-dentia-hero) header.transparent:not(.smaller) {
-  background: transparent !important;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 18, 40, 0.92) 0%,
+    rgba(10, 18, 40, 0.72) 55%,
+    rgba(10, 18, 40, 0) 100%
+  ) !important;
+  box-shadow: none !important;
 }
 body:has(.kn-dentia-hero) header.transparent:not(.smaller) #mainmenu > li > a,
 body:has(.kn-dentia-hero) header.transparent:not(.smaller) .kn-logo-text {
   color: #fff !important;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
 }
 body:has(.kn-dentia-hero) header.transparent:not(.smaller) .kn-logo-text em {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
 }
 body:has(.kn-dentia-hero) header.transparent:not(.smaller) #menu-btn:before {
   color: #fff !important;
