@@ -1688,3 +1688,85 @@ body:has(.kn-dentia-hero) header.transparent:not(.smaller) .menu_side_area .btn-
     margin-right: 0 !important;
   }
 }
+
+/* ===== MOBILE HEADER + OPEN MENU ===== */
+@media (max-width: 991px) {
+  /* Closed: solid frosted bar (no fading gradient strip) */
+  body:has(.kn-dentia-hero) header.transparent.header-mobile:not(.menu-open),
+  body:has(.kn-page-hero) header.transparent.header-mobile:not(.menu-open),
+  body:has(.kn-hero) header.transparent.header-mobile:not(.menu-open) {
+    background: rgba(12, 22, 48, 0.82) !important;
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+  }
+
+  body:has(.kn-dentia-hero) header.transparent.header-mobile:not(.menu-open) .kn-logo-text,
+  body:has(.kn-page-hero) header.transparent.header-mobile:not(.menu-open) .kn-logo-text,
+  body:has(.kn-dentia-hero) header.transparent.header-mobile:not(.menu-open) #menu-btn:before,
+  body:has(.kn-page-hero) header.transparent.header-mobile:not(.menu-open) #menu-btn:before {
+    color: #fff !important;
+    text-shadow: none !important;
+  }
+  body:has(.kn-dentia-hero) header.transparent.header-mobile:not(.menu-open) .kn-logo-text em,
+  body:has(.kn-page-hero) header.transparent.header-mobile:not(.menu-open) .kn-logo-text em {
+    color: rgba(255, 255, 255, 0.82) !important;
+  }
+
+  /* Scrolled closed bar stays white + dark text */
+  header.smaller.header-mobile:not(.menu-open) {
+    background: rgba(255, 255, 255, 0.96) !important;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+
+  /* Open menu: almost solid, lightly transparent + blur */
+  header.header-mobile.menu-open,
+  header.smaller.header-mobile.menu-open,
+  body:has(.kn-dentia-hero) header.header-mobile.menu-open,
+  body:has(.kn-page-hero) header.header-mobile.menu-open,
+  body:has(.kn-dentia-hero) header.transparent.header-mobile.menu-open,
+  body:has(.kn-page-hero) header.transparent.header-mobile.menu-open {
+    background: rgba(12, 22, 48, 0.94) !important;
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    box-shadow: none !important;
+    overflow-y: auto !important;
+  }
+
+  header.header-mobile.menu-open .kn-logo-text,
+  header.header-mobile.menu-open .kn-logo-text em,
+  header.header-mobile.menu-open #menu-btn:before,
+  header.header-mobile.menu-open #mainmenu a,
+  header.header-mobile.menu-open #mainmenu a.menu-item,
+  header.header-mobile.menu-open #mainmenu > li > a,
+  header.smaller.header-mobile.menu-open .kn-logo-text,
+  header.smaller.header-mobile.menu-open .kn-logo-text em,
+  header.smaller.header-mobile.menu-open #menu-btn:before,
+  header.smaller.header-mobile.menu-open #mainmenu a.menu-item {
+    color: #ffffff !important;
+    text-shadow: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  header.header-mobile.menu-open #mainmenu {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    padding: 12px 0 40px !important;
+  }
+
+  header.header-mobile.menu-open #mainmenu > li {
+    border-bottom-color: rgba(255, 255, 255, 0.14) !important;
+  }
+
+  header.header-mobile.menu-open #mainmenu a.menu-item {
+    padding: 14px 4px !important;
+    font-size: 1.05rem !important;
+  }
+
+  header.header-mobile.menu-open .menu_side_area .btn-main {
+    display: none !important;
+  }
+}
